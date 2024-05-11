@@ -11,6 +11,7 @@ function Login() {
   };
   const onSubmit = (values, opt) => {
     console.log(values);
+    opt.resetFrom()
   };
 
   const validationSchema = Yup.object().shape({
@@ -127,12 +128,12 @@ function Login() {
             </Form>
           </Formik>
           <Text width={"100%"} textAlign={"center"} mt={"10px"}>
-            Already have Account?{" "}
+            Don't have Account?{" "}
             <Link
               to={"/signup"}
               style={{ fontWeight: "bold", textDecoration: "underline" }}
             >
-              Login
+              Signup
             </Link>
           </Text>
         </Box>
